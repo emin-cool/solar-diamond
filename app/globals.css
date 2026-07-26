@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Solar Diamond — design tokens
+   Tailwind v4 keeps its theme in CSS. Everything declared inside `@theme`
+   becomes a named utility (e.g. `--color-gold` -> `bg-gold` / `text-gold`),
+   so components never hardcode hex values.
+--------------------------------------------------------------------------- */
+@theme {
+  /* Brand palette (locked — see CLAUDE.md) */
+  --color-gold: #c9a227;
+  --color-ivory: #faf6ef;
+  --color-navy: #12141c;
+  --color-champagne: #e8d9b5;
+
+  /* Semantic aliases */
+  --color-background: var(--color-ivory);
+  --color-foreground: var(--color-navy);
+
+  /* Typography — variables are injected by next/font in app/layout.tsx */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+/* ---------------------------------------------------------------------------
+   Base styles
+--------------------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-navy);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* Quiet-luxury detail: warm selection instead of the browser default blue */
+  ::selection {
+    background-color: var(--color-champagne);
+    color: var(--color-navy);
+  }
+
+  /* Keyboard focus stays visible, but in brand gold rather than default outline */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+
+  /* Media should never overflow its container on mobile */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}
