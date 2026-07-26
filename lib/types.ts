@@ -13,6 +13,16 @@ export interface Product {
   /** Short spec chips shown under the name, e.g. ["1.5 CT", "D COLOR", "VVS1"]. */
   specs?: string[];
   certificate?: Certificate;
+
+  // Product detail page fields
+  /** Short italic line under the price, e.g. "A radiant classic, cut to catch every angle of light." */
+  tagline?: string;
+  shape?: string;
+  carat?: number;
+  cut?: string;
+  color?: string;
+  clarity?: string;
+  metal?: string;
 }
 
 export interface NavItem {
