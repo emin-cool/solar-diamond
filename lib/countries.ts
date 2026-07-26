@@ -1,0 +1,23 @@
+/** International shipping destinations offered at checkout. */
+export const COUNTRIES = [
+  "United States",
+  "United Kingdom",
+  "Canada",
+  "Australia",
+  "Germany",
+  "France",
+  "Italy",
+  "Spain",
+  "Switzerland",
+  "Netherlands",
+  "Sweden",
+  "Norway",
+  "Denmark",
+  "United Arab Emirates",
+  "Saudi Arabia",
+  "Qatar",
+  "Turkey",
+  "Singapore",
+  "Japan",
+  "South Korea",
+] as const;
