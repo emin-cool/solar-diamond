@@ -1,16 +1,16 @@
-import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 /**
- * No real post imagery exists yet — abstract gradient tiles stand in rather
- * than reusing product photography, which would misrepresent them as real
- * social posts.
+ * Placeholder lifestyle imagery (Lorem Picsum, picsum.photos) — no real
+ * Instagram feed exists yet. Swap for the live feed once the account is
+ * connected.
  */
-const TONES = [
-  "from-navy to-navy/80",
-  "from-gold/70 to-gold/40",
-  "from-champagne to-champagne/50",
-  "from-navy/90 to-gold/30",
-  "from-champagne/70 to-navy/20",
+const POSTS = [
+  "/images/mock/instagram/post-1.jpg",
+  "/images/mock/instagram/post-2.jpg",
+  "/images/mock/instagram/post-3.jpg",
+  "/images/mock/instagram/post-4.jpg",
+  "/images/mock/instagram/post-5.jpg",
 ];
 
 export function InstagramStrip() {
@@ -31,15 +31,17 @@ export function InstagramStrip() {
       </header>
 
       <div className="mt-10 grid grid-cols-3 gap-2 sm:grid-cols-5 sm:gap-3">
-        {TONES.map((tone, index) => (
+        {POSTS.map((src, index) => (
           <div
-            key={index}
-            className={`flex aspect-square items-center justify-center bg-gradient-to-br ${tone}`}
+            key={src}
+            className="group relative aspect-square overflow-hidden bg-champagne/25"
           >
-            <Sparkles
-              className="size-6 text-ivory/70"
-              strokeWidth={1}
-              aria-hidden
+            <Image
+              src={src}
+              alt={`Solar Diamond Instagram post ${index + 1}`}
+              fill
+              sizes="(min-width: 640px) 20vw, 33vw"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
             />
           </div>
         ))}

@@ -1,15 +1,17 @@
-import { Gem } from "lucide-react";
+import Image from "next/image";
 import { CertificateBadge } from "@/components/ui/Badge";
 
 export function Certification() {
   return (
     <section className="bg-champagne/20 py-20 lg:py-28">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-12">
-        <div className="order-2 flex aspect-[16/10] items-center justify-center bg-navy lg:order-1">
-          <Gem
-            className="size-20 text-gold sm:size-28"
-            strokeWidth={0.75}
-            aria-hidden
+        <div className="order-2 relative aspect-[16/10] overflow-hidden bg-navy lg:order-1">
+          <Image
+            src="/images/mock/zenith-emerald.png"
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 55vw, 90vw"
+            className="object-cover opacity-90"
           />
         </div>
 

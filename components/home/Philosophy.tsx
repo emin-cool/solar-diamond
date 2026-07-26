@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 
 export function Philosophy() {
@@ -33,17 +34,18 @@ export function Philosophy() {
           </Button>
         </div>
 
-        {/* No lifestyle photography exists yet — an abstract radiance motif
-            stands in, consistent with the hero's placeholder treatment. */}
+        {/* No lifestyle photography exists yet — reuses a product mock shot. */}
         <div
           aria-hidden
-          className="order-1 relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-champagne/60 via-ivory to-champagne/30 lg:order-2"
+          className="order-1 relative aspect-[4/5] overflow-hidden bg-champagne/25 lg:order-2"
         >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="size-40 rounded-full border border-gold/40 sm:size-56" />
-            <div className="absolute size-28 rounded-full border border-gold/30 sm:size-40" />
-            <div className="absolute size-16 rounded-full bg-gold/15 sm:size-24" />
-          </div>
+          <Image
+            src="/images/mock/aura-oval-pave.png"
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 45vw, 90vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </section>
