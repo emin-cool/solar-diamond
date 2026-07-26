@@ -10,19 +10,19 @@ const CATEGORIES = [
   {
     label: "Engagement",
     note: "Shop the Collection",
-    href: "/collections/engagement",
+    href: "/collections",
     image: "/images/mock/helios-solitaire.png",
   },
   {
     label: "Earrings",
     note: "Discover Brilliance",
-    href: "/collections/earrings",
+    href: "/collections",
     image: "/images/mock/aura-oval-pave.png",
   },
   {
     label: "Necklaces",
     note: "Radiant Essentials",
-    href: "/collections/necklaces",
+    href: "/collections",
     image: "/images/mock/zenith-emerald.png",
   },
   {
