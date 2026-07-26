@@ -25,6 +25,20 @@ export interface Product {
   metal?: string;
 }
 
+export interface CartLineItem {
+  id: string;
+  productSlug: string;
+  name: string;
+  image: string;
+  price: number;
+  currency?: string;
+  specs: string[];
+  metal: string;
+  size: string;
+  engraving?: string;
+  quantity: number;
+}
+
 export interface NavItem {
   label: string;
   href: string;
