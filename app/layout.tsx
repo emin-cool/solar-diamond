@@ -29,10 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full`}
-    >
+    <html lang="en" className={`${inter.variable} ${playfair.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-ivory text-navy">
         {children}
       </body>
