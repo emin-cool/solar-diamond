@@ -12,7 +12,7 @@ const DEFAULT_COLUMNS: FooterColumn[] = [
     title: "The Story",
     links: [
       { label: "The Diamond Story", href: "/heritage" },
-      { label: "Ethical Sourcing", href: "/sourcing" },
+      { label: "Ethical Sourcing", href: "/sustainability" },
       { label: "Sustainability", href: "/sustainability" },
       { label: "Journal", href: "/journal" },
     ],
@@ -109,7 +109,7 @@ export function Footer({
               </h2>
               <ul className="mt-5 space-y-3.5">
                 {column.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link
                       href={link.href}
                       className="font-sans text-sm text-navy/80 transition-colors duration-300 hover:text-gold"

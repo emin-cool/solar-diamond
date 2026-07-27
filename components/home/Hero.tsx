@@ -54,7 +54,7 @@ export function Hero() {
               Explore Collections
             </Button>
             <Button
-              href="/philosophy"
+              href="/heritage"
               variant="onImage"
               icon={<ArrowRight className="size-4" />}
             >

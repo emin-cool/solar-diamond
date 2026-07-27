@@ -25,7 +25,7 @@ export function Philosophy() {
             essence of light for the modern, conscious connoisseur.&rdquo;
           </p>
           <Button
-            href="/philosophy"
+            href="/heritage"
             variant="link"
             className="mt-8"
             icon={<ArrowRight className="size-4" />}
